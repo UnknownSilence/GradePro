@@ -1,0 +1,16 @@
+{
+  "name": "gradepro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trent Hardy",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "create-react-app": "^2.1.3",
+    "firebase": "^5.8.1"
+  }
+}
