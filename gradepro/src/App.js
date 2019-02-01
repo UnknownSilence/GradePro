@@ -1,50 +1,31 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import gradeBook from './components/gradeBook';
+import Home from "./components/Home"
+import ErrorShow from "./components/ErrorShow"
 
-import Titles from "./components/Titles";
-import Form from "./components/Form";
+
+
+
+
 
 
 class App extends React.Component {
 
-	state = {
-		user: undefined,
-		pass: undefined,
-		error: undefined
 
-	}
-
-	loginUser = async (e) => {
-		e.preventDefault();
-
-		const districtName = "Klein ISD" //Hard coded for now
-		const userName = e.target.elements.user.value
-		const password = e.target.elements.pass.value
-
-		this.setState({
-			user: userName,
-			pass: password,
-			district: districtName
-		})
-
-		const data = "Test"
-		console.log(data);
-	}
 
 	render() {
 		return (
-			<div className="wrapper">
-				<div className="main">
-					<div className="container">
-						<div className="row">
-							<div className="col-xl form-container">
-								<Titles className="titleTag"></Titles>
-								<Form className="loginForm" loginUser={this.loginUser}></Form>
-							</div>
-						</div>
-					</div>
-				</div>
 
-			</div>
+			<BrowserRouter>
+				<Switch>
+					<Route path="/" component={Home} exact></Route>
+					<Route path="/gradebook" component={gradeBook}></Route>
+					<Route component={ErrorShow}></Route>
+				</Switch>
+			</BrowserRouter>
+
+
 		);
 	}
 }
