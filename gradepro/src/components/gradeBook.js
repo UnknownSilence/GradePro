@@ -1,6 +1,5 @@
 import React from 'react';
 import Grades from "./gradebookComponents/Grades"
-import Sidebar from './gradebookComponents/sidebar';
 
 
 class gradeBook extends React.Component {
@@ -147,8 +146,8 @@ class gradeBook extends React.Component {
     render() {
         return (
             <div>
-                <Grades></Grades>
-                <Sidebar></Sidebar>
+                <Grades>
+                </Grades>
             </div>
         );
     }

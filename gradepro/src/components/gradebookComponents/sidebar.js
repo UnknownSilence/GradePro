@@ -5,11 +5,6 @@ class Sidebar extends React.Component {
         return (
 
             <div className="sidebar">
-                <div class="container">
-                    <div class="row">
-
-                    </div>
-                </div>
             </div>
         );
     }

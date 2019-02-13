@@ -6,6 +6,9 @@ import Form from "./Form"
 import { Redirect } from "react-router-dom";
 
 
+
+
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyAN3AAPOYqIwoMoAvQS7wxFvGAKSdKMM2c",
@@ -40,7 +43,6 @@ class Home extends React.Component {
         // We will display Google and Facebook as auth providers.
         signInOptions: [
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            firebase.auth.EmailAuthProvider.PROVIDER_ID
         ],
         callbacks: {
             signInSuccess: () => false
@@ -99,7 +101,7 @@ class Home extends React.Component {
 
                                     (
                                         //ui if user not signed in
-                                        <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}></StyledFirebaseAuth>
+                                        <StyledFirebaseAuth className="firebase-btn" uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}></StyledFirebaseAuth>
                                     )
 
                                 }

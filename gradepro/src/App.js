@@ -5,11 +5,6 @@ import Home from "./components/Home"
 import ErrorShow from "./components/ErrorShow"
 
 
-
-
-
-
-
 class App extends React.Component {
 
 
